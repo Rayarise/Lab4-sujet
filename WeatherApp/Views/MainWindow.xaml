@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <Button DockPanel.Dock="Top" Content="Load content TODO"/>
-        <TextBox Text="TODO"/>
+        <StackPanel>
+            <Button DockPanel.Dock="Top" Content="Load content" Command="{Binding GetTempCommand}" />
+        <StackPanel Orientation="Horizontal">
+
+            <Label Content="Temperature: " />
+            <Label  Content="{Binding CurrentTemp.Temperature}"/>
+        </StackPanel>
+        </StackPanel>
+
     </DockPanel>
 </Window>
